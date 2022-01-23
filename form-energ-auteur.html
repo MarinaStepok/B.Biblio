@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+
+	<head>
+		<meta charset="UTF-8">
+		
+		<link rel="stylesheet" href="css/styles.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
+		<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&family=Roboto:ital,wght@0,300;0,400;1,500;1,700&display=swap" rel="stylesheet">
+		
+		<script src="https://kit.fontawesome.com/40aaf9b675.js" crossorigin="anonymous"></script>
+
+		<title>BBiblio</title>
+	</head>
+	 
+	<body>
+		<!--start header-->
+		<header>
+			<div class="container">
+				<div class="line">
+					<h3>Votre enregistrement comme l'AUTEUR</h3>
+				</div>
+			</div>
+		</header>
+		<!--end header-->
+
+		<!--start main-->
+		<main>
+			<div class="container">
+				<p>Remplissez le formulaire et insérez votre adresse e-mail active et valide, et vous recevrez le code personnel et le mot de passe pour accéder à votre espace personnel où vous pourrez envoyer le fichier PDF de votre projet.</p>
+				
+
+				<form class="form_auter"  action="form-energ-auteur-2.html" method="get" onSubmit="return checkForm(this);">
+					<fieldset class="fieldest">
+						<legend class="legende">Personal Information</legend>
+						
+						<p>Votre nom 
+							<input class="color" id="nom" type="text" name="nom" value="" required placeholder="Entrez nom"/>
+						</p>
+						
+						<p> 
+							Votre prénom <input class="color" id="prenom" type="text" name="prenom" value="" required placeholder="Entrez prénom"/>
+						</p>
+						
+						<p>
+							Votre date de naissance <input class="color" id="data" type="data" name="data" value="" required placeholder="20/01/2022"/>
+						</p>
+					</fieldset>
+					
+					<fieldset class="fieldest">
+						<legend class="legende">Adresse</legend>
+						
+						<p>
+							Votre adresse <input class="color" id="adresse" type="text" name="adresse" value="" required placeholder="Entrer l'adresse"/>
+						</p>
+						
+						<p>
+							Votre ville <input class="color" id="ville" type="text" name="ville" value="" required placeholder="Entrer ville"/>
+						
+						<p>
+							Votre code postal <input class="color" id="code" type="text" name="code" value="" required placeholder="Entrer code postal"/>
+						</p>
+						
+						<p>
+							Votre E-mail <input class="color" id="mail" type="text" name="mail" value="" required placeholder="nom@gmail.com">
+						</p>
+
+						<p>
+							Votre téléphone <input class="color" id="telephone" type="text" name="telephone" value="" required placeholder="0755577700"/>
+						</p>
+					</fieldset> 
+			
+					<div class="form_question">
+						<h5>Merci d'avoir rempli le formulaire d'inscription</h5>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt facilis eius
+							cupiditate laboriosam voluptate, ipsum inventore, dolores voluptatibus deserunt unde 
+							aut nam exercitationem expedita optio debitis perferendis! Tempora doloremque laborum
+							veritatis ratione esse possimus, unde voluptas reiciendis tempore officia iste cumque 
+							
+							<a href="#">Télécharger et lire le règlement complet</a>
+						</p>
+
+						<div class="confirme">
+							<input id="check" type="radio" name="confirme" value="" required/>
+							<div>Je confirme avoir lu et accepté les conditions générales et la procédure d'inscription.</div>
+						</div>
+ 
+					</div>
+					
+					<div class="valid">
+						<input id="button-valid" class="button" type="submit" value="Validez"/>
+						<input id="button-annulez" type="reset" value="Annulez"/>
+					</div>
+				</form>
+				
+			</div>
+		</main> 
+		<!--end main-->
+
+		<script src="js/form-auter.js"></script>
+	</body>
+</html>
+
+<!---->	

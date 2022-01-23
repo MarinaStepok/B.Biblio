@@ -1,0 +1,192 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+
+	<head>
+		<meta charset="UTF-8">
+		
+		<link rel="stylesheet" href="css/styles.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
+		<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&family=Roboto:ital,wght@0,300;0,400;1,500;1,700&display=swap" rel="stylesheet">
+		
+		<script src="https://kit.fontawesome.com/40aaf9b675.js" crossorigin="anonymous"></script>
+
+		<title>BBiblio</title>
+	</head>
+	 
+	<body>
+		<!--start header-->
+		<header>
+			<div class="header_inner">				
+				<div class="logo">B.Biblio</div>
+
+				<div class="container">
+					<nav class="nav">
+						<div class="nav__left">
+							<a class="nav__link active" href="index.html">Accueil</a>
+							<a class="nav__link" href="regles.html">Règles</a>
+							<a class="nav__link" href="enregistrement.html">Enregistrement</a>
+							<a class="nav__link" href="nouvelles.html">Nouvelles</a>
+							<a class="nav__link" href="contact.html">Contact</a>
+						</div>
+
+						<div class="nav__right">
+							<a class="nav__link espace" href="index.html">Decconection
+								<i class="fas fa-sign-in-alt"></i>
+							</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!--end header-->
+
+
+		<!--start main-->
+		<main>
+			<div class="container">
+				<div class="espace_personnel">
+					<div class="espace_title">
+						<h2>Votre espace personnel comme l'AUTEUR</h2>
+						 Remplissez vos coordonnées
+					</div>
+
+					<div class="espace_left">
+						<div class="photo_espace">
+							<img src="http://placehold.jp/250x300.png" alt="">
+						</div>
+						<p>Ajoutez votre photo
+							<input id="file" type="file" name="file" required/>
+						</p>
+					</div>
+
+				
+					<div class="espace_right">
+						<form class="form_auter" action="get">
+							<fieldset class="fieldest">
+								<legend class="legende">Personal Information</legend>
+									
+								<p>
+									Votre nom <input class="color" id="nom" type="text" name="nom" placeholder="Entrez nom" required />
+								</p>
+									
+								<p> 
+									Votre prénom <input  class="color" id="prenom" type="text" name="prenom" placeholder="Entrez prénom" required />
+								</p>
+									
+								<p>
+									Votre date de naissance <input  class="color" id="data" type="text" name="data" placeholder="20/01/2022" required />
+								</p>
+
+								<p>			
+									Votre biographie <textarea  class="color" id="color" name="commentaire" cols="350" rows="10" placeholder="Ecrivez biographie" required ></textarea>
+								</p>
+							</fieldset>	
+							
+							<fieldset class="fieldest">
+								<legend class="legende">Informations sur votre livre </legend>
+									<p>Catégorie</p>
+									<select class="choice_book" name="catégorie">
+										<option class="choice_livre" value="Choisissez" selected="selected">Choisissez votre catégorie</option> 
+										<option class="choice_livre" value="Roman français">Roman français</option>
+										<option class="choice_livre" value="Roman étranger " >Roman étranger </option>
+										<option class="choice_livre" value="Documentaire ">Documentaire </option>	
+									</select>
+									
+									<p class="defaut">Par défaut, une œuvre concourt pour sa catégorie. Si l’œuvre peut concourir pour plusieurs 
+									catégories, les administrateurs prendront alors contact avec l’auteur/éditeur, une œuvre ne 
+									pouvant concourir que pour une seule catégorie.</p> 
+
+									<p>
+										Titre<input class="color" id="color" type="text" name="nom" placeholder="Entrez titre" required/>
+									</p>
+
+									<p>
+										Date de départ<input class="color" id="color" type="text" name="nom" placeholder="20/01/2022" required/>
+									</p>
+
+									<p>
+										Nombre de pages<input class="color" id="color" type="text" name="nom" placeholder="Entrez nombre de pages" required/>
+									</p>
+
+									
+									<p>Langue</p>
+										<select class="choice_book" name="catégorie" required>
+											<option class="choice_livre" value="Choisissez" selected="selected">Choisissez votre langue</option> 
+											<option class="choice_livre" value="français">français</option>
+											<option class="choice_livre" value="anglais">anglais</option>
+											<option class="choice_livre" value="italien">italien</option>
+											<option class="choice_livre" value="autre">autre</option>	
+										</select> 
+										
+									<p>
+										Si vous avez répondu autre, précisez <input class="color" id="color" type="text" name="nom" placeholder="Entrez autre langue"/>  
+									</p>
+									
+									<p>Format</p>
+									<select class="choice_book" name="catégorie" required>
+										<option class="choice_livre" value="Choisissez" selected="selected">Choisissez votre format</option> 
+										<option class="choice_livre" value="format">format1</option>
+										<option class="choice_livre" value="format">format2</option>
+										<option class="choice_livre" value="format">format3</option>	
+									</select> 
+
+									<p>			
+										Résumé du livre<textarea id="color" name="resume" cols="650" rows="15" placeholder="Ecrivez résumé" required></textarea>
+									</p>
+
+									Attachez votre livre (.pdf)
+								
+									<input id="file" type="file" name="file" required/>
+								</fieldset>
+
+								<div class="valid">
+									<input id="button-valid" type="Submit" value="Validez"/>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main> 
+		<!--end main-->
+		
+		
+		<!--start footer-->
+
+		<!--<footer>
+			<div class="footer">
+				<div class="footer_inner">
+					<h2>B.Biblio</h2>
+				</div>
+
+				<div class="footer_inner">
+					<div class="footer_links">
+						<a href="#">Accueil</a>
+						<a href="#">Règles</a>
+						<a href="#">Enregistrement</a>
+						<a href="#">Nouvelles</a>
+						<a href="#">Contact</a>
+					</div>
+				</div>
+				
+				<div class="footer_inner">
+					<div class="social">
+						<i class="fab fa-facebook"></i>
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-instagram"></i>
+					</div>
+				</div>
+				<div class="copy">© Copyright 2025 B.Biblio</div>
+			</div>
+		</footer>--> 
+		
+		<!--end footer-->	
+	
+		
+		
+	</body>
+</html>
+
+<!---->	

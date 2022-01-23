@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&family=Roboto:ital,wght@0,300;0,400;1,500;1,700&display=swap"
+		rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/40aaf9b675.js" crossorigin="anonymous"></script>
+
+	<title>BBiblio</title>
+</head>
+
+<body>
+	<!--start header-->
+	<header>
+		<div class="header_inner">				
+			<div class="logo">B.Biblio</div>
+
+			<div class="container">
+				<nav class="nav">
+					<div class="nav__left">
+						<a class="nav__link active" href="index.html">Accueil</a>
+						<a class="nav__link" href="regles.html">Règles</a>
+						<a class="nav__link" href="enregistrement.html">Enregistrement</a>
+						<a class="nav__link" href="nouvelles.html">Nouvelles</a>
+						<a class="nav__link" href="contact.html">Contact</a>
+					</div>
+
+					<div class="nav__right">
+						<a class="nav__link espace" href="login.html">Login Auter
+							<i class="fas fa-sign-in-alt"></i>
+						</a>
+
+						<a class="nav__link" href="espace-jury.html">Jury
+							<i class="fas fa-sign-in-alt"></i>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="line">
+			Enregistrement est ouverte pour 2022
+		</div>
+	</header>
+	<!--end header-->
+
+
+
+
+	<!--start main-->
+	<main>
+		<div class="container">
+
+			<form class="login-form" action="espace-auteur.html" method="post">
+
+				<div class="container">
+					<label for="uname"><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
+
+					<label for="psw"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<button type="submit">Login</button>
+					<label>
+						<input type="checkbox" checked="checked" name="remember"> Remember me
+					</label>
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+					<!--<button type="button" class="cancelbtn">Cancel</button>
+					<span class="psw">Forgot <a href="#">password?</a></span>-->
+				</div>
+			</form>
+
+		</div>
+	</main>
+
+	<style>
+		/* Bordered form */
+		.login-form {
+			border: 3px solid #f1f1f1;
+			margin-top: 50px;
+		}
+
+		/* Full-width inputs */
+		input[type=text],
+		input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		/* Set a style for all buttons */
+		button {
+			background-color:rgb(243, 106, 106);
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		/* Add a hover effect for buttons */
+		button:hover {
+			background-color: rgb(218, 53, 53);
+		}
+
+		/* Extra style for the cancel button (red) */
+		.cancelbtn {
+			width: auto;
+			padding: 10px 18px;
+			background-color: #f44336;
+		}
+
+		/* Center the avatar image inside this container */
+		.imgcontainer {
+			text-align: center;
+			margin: 24px 0 12px 0;
+		}
+
+		/* Avatar image */
+		img.avatar {
+			width: 40%;
+			border-radius: 50%;
+		}
+
+		/* The "Forgot password" text */
+		span.psw {
+			float: right;
+			padding-top: 16px;
+		}
+
+		/* Change styles for span and cancel button on extra small screens */
+		@media screen and (max-width: 300px) {
+			span.psw {
+				display: block;
+				float: none;
+			}
+
+			.cancelbtn {
+				width: 100%;
+			}
+		}
+	</style>
+	<!--end main-->
+
+
+	<!--start footer-->
+	<footer>
+		<div class="footer">
+			<div class="footer_inner">
+				<h2>B.Biblio</h2>
+			</div>
+
+			<div class="footer_inner">
+				<div class="footer_links">
+					<a href="index.html">Accueil</a>
+					<a href="regles.html">Règles</a>
+					<a href="enregistrement.html">Enregistrement</a>
+					<a href="nouvelles.html">Nouvelles</a>
+					<a href="contact.html">Contact</a>
+				</div>
+			</div>
+
+			<div class="footer_inner">
+				<div class="social">
+					<a href="https://fr-fr.facebook.com" target="_blank">
+						<i class="fab fa-facebook"></i>
+					</a>
+
+					<a href="https://twitter.com" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+
+					<a href="https://www.instagram.com/" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+			<div class="copy">© Copyright 2025 B.Biblio</div>
+		</div>
+	</footer>
+	<!--end footer-->
+</body>
+
+</html>
+
+<!---->
