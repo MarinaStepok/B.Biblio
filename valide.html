@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="line">
+                <h3>Votre enregistrement comme l'AUTEUR</h3>
+            </div>
+        </div>
+    </header>
+    <!--end header-->
+
+    <div class="container">
+        <p>Remplissez le formulaire et insérez votre adresse e-mail active et valide, et vous recevrez le code personnel
+            et le mot de passe pour accéder à votre espace personnel où vous pourrez envoyer le fichier PDF de votre
+            projet.</p>
+
+        <form class="valide-form" action="traitement.html" method="GET">
+            <fieldset class="fieldest">
+                <legend class="legende">Personal Information</legend>
+                <div class="wrap_input">
+                    <label for="name">Votre nom </label>
+                    <br>
+                    <input type="text" name="nom" id="nom">
+                </div>
+                <br> <!-- elem-1 -->
+
+                <div class="wrap_input">
+                    <label for="prenom">Votre prénom </label>
+                    <br>
+                    <input type="text" name="prenom" id="prenom">
+                </div>
+                <br><!-- elem-2 -->
+
+                <div class="wrap_input">
+                    <label for="name">Votre date de naissance </label>
+                    <br>
+                    <input type="data" name="data" id="data">
+                </div>
+                <br> <!-- elem-3 -->
+            </fieldset>
+
+            <fieldset class="fieldest">
+                <legend class="legende">Adresse</legend>
+
+                <div class="wrap_input">
+                    <label for="mail">Votre adresse </label>
+                    <br>
+                    <input type="text" name="adresse" id="adresse">
+                </div>
+                <br><!-- elem-4 -->
+
+                <div class="wrap_input">
+                    <label for="mail">Votre ville </label>
+                    <br>
+                    <input type="text" name="ville" id="ville">
+                </div>
+                <br><!-- elem-5 -->
+
+                <div class="wrap_input">
+                    <label for="name">Votre code postal</label>
+                    <br>
+                    <input type="text" name="code" id="code">
+                </div>
+                <br> <!-- elem-6 -->
+
+                <div class="wrap_input">
+                    <label for="name">Votre E-mail<label>
+                            <br>
+                            <input type="mail" name="mail" id="mail">
+                </div>
+                <br> <!-- elem-7 -->
+
+
+                <div class="wrap_input">
+                    <label for="mail">Votre téléphone </label>
+                    <br>
+                    <input type="text" name="telephone" id="telephone">
+                </div>
+                <br><!-- elem-8 -->
+
+
+            </fieldset>
+
+            <div class="form_question">
+
+                <h5>Merci d'avoir rempli le formulaire d'inscription</h5>
+                
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt facilis eius
+                    cupiditate laboriosam voluptate, ipsum inventore, dolores voluptatibus deserunt unde
+                    aut nam exercitationem expedita optio debitis perferendis! Tempora doloremque laborum
+                    veritatis ratione esse possimus, unde voluptas reiciendis tempore officia iste cumque
+
+                    <a href="#">Télécharger et lire le règlement complet</a>
+                </p>
+
+                <div class="confirme">
+                    <input id="check" type="radio" name="" value="" required />
+                    <div>Je confirme avoir lu et accepté les conditions générales et la procédure d'inscription.</div>
+                </div>
+
+            </div> <!-- end form_question -->
+
+            <div class="btn-valide">
+                <input class="button-valid" type="submit" id="btn">
+            </div>
+
+        </form> <!-- end-form -->
+
+
+
+
+    </div><!-- end-container-->
+
+
+
+
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', traitement);
+
+        function traitement(e) {
+            var nom = document.forms[0].nom.value;
+            var prenom = document.forms[0].prenom.value;
+
+            var data = document.forms[0].data.value;
+            var adresse = document.forms[0].adresse.value;
+
+            var ville = document.forms[0].ville.value;
+            var code = document.forms[0].code.value;
+
+            var mail = document.forms[0].mail.value;
+            var telephone = document.forms[0].telephone.value;
+
+
+            var reg = new RegExp('^[a-z0-9_.-]+@[a-z0-9_.-]+\.[a-z]{2,4}$');
+            var bool = true;
+
+            if (prenom.length <= 3) {
+                alert("Le prénom doit contenir au moins trois lettres");
+                bool = false;
+                e.preventDefault();
+            }
+            if (!(reg.test(mail))) {
+                alert("Le mail n'est pas valide");
+                bool = false
+                e.preventDefault();
+            }
+            if (bool) {
+                alert("Vous avez saisi : \n" + prenom + "\n" + mail);
+                window.location.href = "traitement.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

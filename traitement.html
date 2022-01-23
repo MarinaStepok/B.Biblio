@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Traitement du formulaire</h1>
+    <p>Informations fournies par le formulaire :</p>
+
+    <div id="nom">Nom : </div>
+    <div id="prenom">Prénom : </div>
+
+    <div id="data">Date de naissance : </div>
+    <div id="adresse">Adresse : </div>
+
+    <div id="ville">Ville : </div>
+    <div id="code">Code postal : </div>
+
+    <div id="mail">E-mail : </div>
+    <div id="telephone">Téléphone : </div>
+
+    <script>
+        var result = new URLSearchParams(window.location.search);
+        if(result.has('nom', 'prenom', 'data', 'adresse', 'ville', 'code', 'mail', 'telephone')){
+
+            var div1 = document.getElementById('nom');
+            div1.innerHTML = "Nom : "+result.get('nom');
+
+            var div2 = document.getElementById('prenom');
+            div2.innerHTML = "Prénom : "+result.get('prenom');
+
+            var div3 = document.getElementById('data');
+            div3.innerHTML = "Date de naissance : "+result.get('data');
+
+            var div4 = document.getElementById('adresse');
+            div4.innerHTML = "Adresse : "+result.get('adresse');
+
+            var div5 = document.getElementById('ville');
+            div5.innerHTML = "Ville : "+result.get('ville');
+
+            var div6 = document.getElementById('code');
+            div6.innerHTML = "Code postal : "+result.get('code');
+
+            var div7 = document.getElementById('mail');
+            div7.innerHTML = "E-mail : "+result.get('mail');
+
+            var div8 = document.getElementById('telephone');
+            div8.innerHTML = "Téléphone : "+result.get('telephone');
+        }
+
+        
+        if(window.location.href.substr(-15) == "traitement.html"){
+            window.location.href = "valide.html";
+        }
+    </script>
+</body>
+</html>

@@ -283,6 +283,30 @@ button:hover {
 
 /* start page Form-energ-auteur */
 
+/* New valide-form START */
+.valide-form {
+	width: 600px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.wrap_input input {
+	width: 450px;
+	border: #333 1px solid;
+	
+}
+
+.valide-form input:focus {
+	background-color: #dfdbdb;
+}
+
+.button-valid {
+	color: white;
+	background-color: rgb(243, 106, 106);
+	border-color:rgb(243, 106, 106);
+	padding: 5px 15px;
+}
+/* New valide-form END */
 .form_auter {
 	margin: 30px 30%;
 	text-align: start;
@@ -320,12 +344,7 @@ fieldset {
 	margin-bottom: 20px;
 }
 
-#button-valid, #button-annulez {
-	color: white;
-	background-color: rgb(243, 106, 106);
-	border-color:rgb(243, 106, 106);
-	padding: 5px 15px;
-}
+
 
 #button-valid:hover, #button-annulez:hover {
 	color: white;
