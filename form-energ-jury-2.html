@@ -21,41 +21,76 @@
 		<header>
 			<div class="container">
 				<div class="line">
-					<h3>Votre enregistrement comme un JYRY</h3>
+					<h3>Votre enregistrement comme un JURY</h3>
 				</div>
 			</div>
 		</header>
 		<!--end header-->
-
-		<!--start main-->
-			<div class="container">
-				<div class="form_recu">
-					<h4> Merci d'avoir rempli le formulaire d'inscription</h4>
+	
+		<div class="container">
+			<div class="form_recu">
+				<h4> Merci d'avoir rempli le formulaire d'inscription</h4>
 					<div class="form_info">
-						<h5>Informations reçues</h5>
-
-						<p id="nom">Votre nom :</p>
-						<p id="prenom">Votre prénom :</p>
-						<p id="data">Votre date de naissance :</p>
-						<p id="adresse">Votre adresse : </p>
-						<p id="ville">Votre ville :</p>
-						<p id="code">Votre code postal :</p>
-						<p id="mail">Votre E-mail :</p>
-						<p id="telephone">Votre téléphone :</p>
+	
+						<h5>Informations reçues : </h5>
+					   
+						<div class="form_plisinfo" id="nom">Nom : </div>
+						<div class="form_plisinfo" id="prenom">Prénom : </div>
+	
+						<div class="form_plisinfo" id="data">Date de naissance : </div>
+						<div class="form_plisinfo" id="adresse">Adresse : </div>
+	
+						<div class="form_plisinfo" id="ville">Ville : </div>
+						<div class="form_plisinfo" id="code">Code postal : </div>
+	
+						<div class="form_plisinfo" id="mail">E-mail : </div>
+						<div class="form_plisinfo" id="telephone">Téléphone : </div>
 					</div>
-					
-
+	
 					<h4>Vous recevrez un LOG et un MOT DE PASSE par mail et vous pourrez vous rendre sur votre espace personnel pour créer un compte</h4>
 					<h4>Merci</h4>
 					<a href="index.html">
 						<button class="btn_fermer">Fermer</button>
 					</a>
-				</div>	
 			</div>
-		<!--end main-->
-
-		<script src="js/form-jury.js"></script>
-		<script src="js/form-jury-2.js"></script>
+		</div>
+	
+	
+	
+		<script>
+			var result = new URLSearchParams(window.location.search);
+			if(result.has('nom', 'prenom', 'data', 'adresse', 'ville', 'code', 'mail', 'telephone')){
+	
+				var div1 = document.getElementById('nom');
+				div1.innerHTML = "Nom : "+result.get('nom');
+	
+				var div2 = document.getElementById('prenom');
+				div2.innerHTML = "Prénom : "+result.get('prenom');
+	
+				var div3 = document.getElementById('data');
+				div3.innerHTML = "Date de naissance : "+result.get('data');
+	
+				var div4 = document.getElementById('adresse');
+				div4.innerHTML = "Adresse : "+result.get('adresse');
+	
+				var div5 = document.getElementById('ville');
+				div5.innerHTML = "Ville : "+result.get('ville');
+	
+				var div6 = document.getElementById('code');
+				div6.innerHTML = "Code postal : "+result.get('code');
+	
+				var div7 = document.getElementById('mail');
+				div7.innerHTML = "E-mail : "+result.get('mail');
+	
+				var div8 = document.getElementById('telephone');
+				div8.innerHTML = "Téléphone : "+result.get('telephone');
+			}
+	
+			
+			if(window.location.href.substr(-15) == "form-energ-jury-2.html"){
+				window.location.href = "form-energ-jury.html";
+			}
+		</script>
 	</body>
 </html>
 

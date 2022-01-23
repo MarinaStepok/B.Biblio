@@ -21,31 +21,29 @@
     <!--end header-->
 
     <div class="container">
-        <p>Remplissez le formulaire et insérez votre adresse e-mail active et valide, et vous recevrez le code personnel
-            et le mot de passe pour accéder à votre espace personnel où vous pourrez envoyer le fichier PDF de votre
-            projet.</p>
+        <p>Remplissez le formulaire et insérez votre adresse e-mail active et valide, et vous recevrez le code personnel et le mot de passe pour accéder à votre espace personnel où vous pourrez envoyer le fichier PDF de votre projet.</p>
 
-        <form class="valide-form" action="traitement.html" method="GET">
+        <form class="form_auter" action="traitement.html" method="GET">
             <fieldset class="fieldest">
                 <legend class="legende">Personal Information</legend>
                 <div class="wrap_input">
                     <label for="name">Votre nom </label>
                     <br>
-                    <input type="text" name="nom" id="nom">
+                    <input type="text" name="nom" id="nom" value="" required placeholder="Entrez nom">
                 </div>
                 <br> <!-- elem-1 -->
 
                 <div class="wrap_input">
                     <label for="prenom">Votre prénom </label>
                     <br>
-                    <input type="text" name="prenom" id="prenom">
+                    <input type="text" name="prenom" id="prenom" value="" required placeholder="Entrez prénom" >
                 </div>
                 <br><!-- elem-2 -->
 
                 <div class="wrap_input">
                     <label for="name">Votre date de naissance </label>
                     <br>
-                    <input type="data" name="data" id="data">
+                    <input type="data" name="data" id="data" value="" required placeholder="20/01/2022">
                 </div>
                 <br> <!-- elem-3 -->
             </fieldset>
@@ -56,28 +54,28 @@
                 <div class="wrap_input">
                     <label for="mail">Votre adresse </label>
                     <br>
-                    <input type="text" name="adresse" id="adresse">
+                    <input type="text" name="adresse" id="adresse" value="" required placeholder="Entrer l'adresse" >
                 </div>
                 <br><!-- elem-4 -->
 
                 <div class="wrap_input">
                     <label for="mail">Votre ville </label>
                     <br>
-                    <input type="text" name="ville" id="ville">
+                    <input type="text" name="ville" id="ville" value="" required placeholder="Entrer ville">
                 </div>
                 <br><!-- elem-5 -->
 
                 <div class="wrap_input">
                     <label for="name">Votre code postal</label>
                     <br>
-                    <input type="text" name="code" id="code">
+                    <input type="text" name="code" id="code" value="" required placeholder="Entrer code postal" >
                 </div>
                 <br> <!-- elem-6 -->
 
                 <div class="wrap_input">
                     <label for="name">Votre E-mail<label>
                             <br>
-                            <input type="mail" name="mail" id="mail">
+                            <input type="mail" name="mail" id="mail" value="" required placeholder="nom@gmail.com">
                 </div>
                 <br> <!-- elem-7 -->
 
@@ -85,7 +83,7 @@
                 <div class="wrap_input">
                     <label for="mail">Votre téléphone </label>
                     <br>
-                    <input type="text" name="telephone" id="telephone">
+                    <input type="text" name="telephone" id="telephone" value="" required placeholder="0755577700">
                 </div>
                 <br><!-- elem-8 -->
 
@@ -100,7 +98,7 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt facilis eius
                     cupiditate laboriosam voluptate, ipsum inventore, dolores voluptatibus deserunt unde
                     aut nam exercitationem expedita optio debitis perferendis! Tempora doloremque laborum
-                    veritatis ratione esse possimus, unde voluptas reiciendis tempore officia iste cumque
+                    veritatis ratione esse possimus, unde voluptas reiciendis tempore officia iste cumque <br>
 
                     <a href="#">Télécharger et lire le règlement complet</a>
                 </p>
@@ -112,15 +110,11 @@
 
             </div> <!-- end form_question -->
 
-            <div class="btn-valide">
+            <div>
                 <input class="button-valid" type="submit" id="btn">
             </div>
 
         </form> <!-- end-form -->
-
-
-
-
     </div><!-- end-container-->
 
 
@@ -144,21 +138,55 @@
             var telephone = document.forms[0].telephone.value;
 
 
+
+            var regex = /[0-9]|\./;
+
             var reg = new RegExp('^[a-z0-9_.-]+@[a-z0-9_.-]+\.[a-z]{2,4}$');
             var bool = true;
 
-            if (prenom.length <= 3) {
-                alert("Le prénom doit contenir au moins trois lettres");
+            /* Nom*/
+
+            if (nom.length <= 2) {
+                alert("Le nom doit contenir au moins 3 lettres");
                 bool = false;
                 e.preventDefault();
             }
+            
+            
+            /* Prénom*/
+
+            if (prenom.length <= 2) {
+                alert("Le prénom doit contenir au moins 3 lettres");
+                bool = false;
+                e.preventDefault();
+            }
+
+            /* Date de naissance*/
+
+            if (!(regex.test(data))){
+            alert('Date de naissance doit contenir uniquement des chiffres');
+            bool = false;
+            e.preventDefault();
+            } 
+
+
+            /* E-mail*/
             if (!(reg.test(mail))) {
                 alert("Le mail n'est pas valide");
                 bool = false
                 e.preventDefault();
             }
+            
+
+            /* Téléphone*/
+            if(!(regex.test(telephone))){
+            alert("Le téléphone doit contenir des chiffres");
+            bool= false
+            e.preventDefault();
+            }
+
             if (bool) {
-                alert("Vous avez saisi : \n" + prenom + "\n" + mail);
+                alert("Merci d'avoir répondu");
                 window.location.href = "traitement.html";
             }
         }

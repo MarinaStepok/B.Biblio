@@ -17,7 +17,7 @@
 	</head>
 	 
 	<body>
-		<!--start header-->
+
 		<header>
 			<div class="container">
 				<div class="line">
@@ -26,83 +26,176 @@
 			</div>
 		</header>
 		<!--end header-->
-
-		<!--start main-->
-		<main>
-			<div class="container">
-				<p>Remplissez le formulaire et insérez votre adresse e-mail active et valide, et vous recevrez le code personnel et le mot de passe pour accéder à votre espace personnel où vous pourrez envoyer le fichier PDF de votre projet.</p>
-				
-
-				<form class="form_auter"  action="form-energ-auteur-2.html" method="get" onSubmit="return checkForm(this);">
-					<fieldset class="fieldest">
-						<legend class="legende">Personal Information</legend>
-						
-						<p>Votre nom 
-							<input class="color" id="nom" type="text" name="nom" value="" required placeholder="Entrez nom"/>
-						</p>
-						
-						<p> 
-							Votre prénom <input class="color" id="prenom" type="text" name="prenom" value="" required placeholder="Entrez prénom"/>
-						</p>
-						
-						<p>
-							Votre date de naissance <input class="color" id="data" type="data" name="data" value="" required placeholder="20/01/2022"/>
-						</p>
-					</fieldset>
-					
-					<fieldset class="fieldest">
-						<legend class="legende">Adresse</legend>
-						
-						<p>
-							Votre adresse <input class="color" id="adresse" type="text" name="adresse" value="" required placeholder="Entrer l'adresse"/>
-						</p>
-						
-						<p>
-							Votre ville <input class="color" id="ville" type="text" name="ville" value="" required placeholder="Entrer ville"/>
-						
-						<p>
-							Votre code postal <input class="color" id="code" type="text" name="code" value="" required placeholder="Entrer code postal"/>
-						</p>
-						
-						<p>
-							Votre E-mail <input class="color" id="mail" type="text" name="mail" value="" required placeholder="nom@gmail.com">
-						</p>
-
-						<p>
-							Votre téléphone <input class="color" id="telephone" type="text" name="telephone" value="" required placeholder="0755577700"/>
-						</p>
-					</fieldset> 
-			
-					<div class="form_question">
-						<h5>Merci d'avoir rempli le formulaire d'inscription</h5>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt facilis eius
-							cupiditate laboriosam voluptate, ipsum inventore, dolores voluptatibus deserunt unde 
-							aut nam exercitationem expedita optio debitis perferendis! Tempora doloremque laborum
-							veritatis ratione esse possimus, unde voluptas reiciendis tempore officia iste cumque 
-							
-							<a href="#">Télécharger et lire le règlement complet</a>
-						</p>
-
-						<div class="confirme">
-							<input id="check" type="radio" name="confirme" value="" required/>
-							<div>Je confirme avoir lu et accepté les conditions générales et la procédure d'inscription.</div>
-						</div>
- 
+	
+		<div class="container">
+			<p>Remplissez le formulaire et insérez votre adresse e-mail active et valide, et vous recevrez le code personnel et le mot de passe pour accéder à votre espace personnel où vous pourrez envoyer le fichier PDF de votre projet.</p>
+	
+			<form class="form_auter" action="form-energ-auteur-2.html" method="GET">
+				<fieldset class="fieldest">
+					<legend class="legende">Personal Information</legend>
+					<div class="wrap_input">
+						<label for="name">Votre nom </label>
+						<br>
+						<input type="text" name="nom" id="nom" value="" required placeholder="Entrez nom">
 					</div>
-					
-					<div class="valid">
-						<input id="button-valid" class="button" type="submit" value="Validez"/>
-						<input id="button-annulez" type="reset" value="Annulez"/>
+					<br> <!-- elem-1 -->
+	
+					<div class="wrap_input">
+						<label for="prenom">Votre prénom </label>
+						<br>
+						<input type="text" name="prenom" id="prenom" value="" required placeholder="Entrez prénom" >
 					</div>
-				</form>
+					<br><!-- elem-2 -->
+	
+					<div class="wrap_input">
+						<label for="name">Votre date de naissance </label>
+						<br>
+						<input type="data" name="data" id="data" value="" required placeholder="20/01/2022">
+					</div>
+					<br> <!-- elem-3 -->
+				</fieldset>
+	
+				<fieldset class="fieldest">
+					<legend class="legende">Adresse</legend>
+	
+					<div class="wrap_input">
+						<label for="mail">Votre adresse </label>
+						<br>
+						<input type="text" name="adresse" id="adresse" value="" required placeholder="Entrer l'adresse" >
+					</div>
+					<br><!-- elem-4 -->
+	
+					<div class="wrap_input">
+						<label for="mail">Votre ville </label>
+						<br>
+						<input type="text" name="ville" id="ville" value="" required placeholder="Entrer ville">
+					</div>
+					<br><!-- elem-5 -->
+	
+					<div class="wrap_input">
+						<label for="name">Votre code postal</label>
+						<br>
+						<input type="text" name="code" id="code" value="" required placeholder="Entrer code postal" >
+					</div>
+					<br> <!-- elem-6 -->
+	
+					<div class="wrap_input">
+						<label for="name">Votre E-mail<label>
+								<br>
+								<input type="mail" name="mail" id="mail" value="" required placeholder="nom@gmail.com">
+					</div>
+					<br> <!-- elem-7 -->
+	
+	
+					<div class="wrap_input">
+						<label for="mail">Votre téléphone </label>
+						<br>
+						<input type="text" name="telephone" id="telephone" value="" required placeholder="0755577700">
+					</div>
+					<br><!-- elem-8 -->
+	
+	
+				</fieldset>
+	
+				<div class="form_question">
+	
+					<h5>Merci d'avoir rempli le formulaire d'inscription</h5>
+					
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt facilis eius
+						cupiditate laboriosam voluptate, ipsum inventore, dolores voluptatibus deserunt unde
+						aut nam exercitationem expedita optio debitis perferendis! Tempora doloremque laborum
+						veritatis ratione esse possimus, unde voluptas reiciendis tempore officia iste cumque <br>
+	
+						<a href="#">Télécharger et lire le règlement complet</a>
+					</p>
+	
+					<div class="confirme">
+						<input id="check" type="radio" name="" value="" required />
+						<div>Je confirme avoir lu et accepté les conditions générales et la procédure d'inscription.</div>
+					</div>
+	
+				</div> <!-- end form_question -->
+	
+				<div>
+					<input class="button-valid" type="submit" id="btn">
+				</div>
+	
+			</form> <!-- end-form -->
+		</div><!-- end-container-->
+	
+	
+	
+	
+		<script>
+			var btn = document.getElementById('btn');
+			btn.addEventListener('click', traitement);
+	
+			function traitement(e) {
+				var nom = document.forms[0].nom.value;
+				var prenom = document.forms[0].prenom.value;
+	
+				var data = document.forms[0].data.value;
+				var adresse = document.forms[0].adresse.value;
+	
+				var ville = document.forms[0].ville.value;
+				var code = document.forms[0].code.value;
+	
+				var mail = document.forms[0].mail.value;
+				var telephone = document.forms[0].telephone.value;
+	
+	
+	
+				var regex = /[0-9]|\./;
+	
+				var reg = new RegExp('^[a-z0-9_.-]+@[a-z0-9_.-]+\.[a-z]{2,4}$');
+				var bool = true;
+	
+				/* Nom*/
+	
+				if (nom.length <= 2) {
+					alert("Le nom doit contenir au moins 3 lettres");
+					bool = false;
+					e.preventDefault();
+				}
 				
-			</div>
-		</main> 
-		<!--end main-->
-
-		<script src="js/form-auter.js"></script>
+				
+				/* Prénom*/
+	
+				if (prenom.length <= 2) {
+					alert("Le prénom doit contenir au moins 3 lettres");
+					bool = false;
+					e.preventDefault();
+				}
+	
+				/* Date de naissance*/
+	
+				if (!(regex.test(data))){
+				alert('Date de naissance doit contenir uniquement des chiffres');
+				bool = false;
+				e.preventDefault();
+				} 
+	
+	
+				/* E-mail*/
+				if (!(reg.test(mail))) {
+					alert("Le mail n'est pas valide");
+					bool = false
+					e.preventDefault();
+				}
+				
+	
+				/* Téléphone*/
+				if(!(regex.test(telephone))){
+				alert("Le téléphone doit contenir des chiffres");
+				bool= false
+				e.preventDefault();
+				}
+	
+				if (bool) {
+					alert("Merci d'avoir répondu");
+					window.location.href = "form-energ-auteur-2.html";
+				}
+			}
+		</script>
 	</body>
-</html>
-
-<!---->	

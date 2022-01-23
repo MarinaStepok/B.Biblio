@@ -93,7 +93,15 @@ button:hover {
 	font-size: 16px;
 	padding-top: 15px;
 }
-/* end  header *
+/* end  header */
+
+.login-form {
+	width: 400px;
+	display: block;
+	margin: 50px auto;
+}
+
+
 
 
 /* start main */
@@ -305,7 +313,16 @@ button:hover {
 	background-color: rgb(243, 106, 106);
 	border-color:rgb(243, 106, 106);
 	padding: 5px 15px;
+	display: block;
+	margin: 0 auto;
 }
+
+.button-valid:hover {
+	background-color:  rgb(218, 53, 53);
+	border-color: rgb(218, 53, 53);
+}
+
+
 /* New valide-form END */
 .form_auter {
 	margin: 30px 30%;
@@ -380,6 +397,12 @@ fieldset {
 	margin: 40px auto;
 	padding: 10px 0 30px 25px;
 }
+
+.form_recu .form_plisinfo {
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+
 
 .form_recu h4 {
 	text-align: center;
@@ -606,6 +629,7 @@ text-align: center;
 	color: rgb(218, 53, 53);
 	font-size: 18px;
 	text-align: center;
+	font-weight: 500;
 }
 
 .choice_book {
@@ -658,9 +682,14 @@ text-align: center;
 	  text-decoration: none;
   }
 
-  .blog_link:hover {
+.blog_link:hover {
 	color: rgb(218, 53, 53);
 }
+
+.blog_see {
+	text-align: center;
+}
+
   /* end blog*/
 
 #message {
