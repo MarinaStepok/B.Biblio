@@ -29,13 +29,50 @@ button {
 	padding: 12px 20px;
 	font-size: 20px;
 	margin-bottom: 30px;
+	transition: all 0.3s ease;
 }
 
 button:hover {
-	color: rgb(255, 255, 255);
+	color: #fff;
 	background-color: rgb(218, 53, 53);
 	border-color:rgb(218, 53, 53);
 }
+
+button a {	
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;	
+}
+
+.button {
+	width: 150px;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	background-color: rgb(243, 106, 106);
+	border-color:rgb(243, 106, 106);
+	border-radius: 15px;
+	padding: 12px 20px;
+	font-size: 20px;
+	margin-bottom: 30px;
+	transition: all 0.3s ease;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button:hover {
+	color: #fff;
+	background-color: rgb(218, 53, 53);
+	border-color:rgb(218, 53, 53);
+}
+
+.button {	
+	
+	color: #fff;
+	transition: all 0.3s ease;	
+}
+
 
 /* start page INDEX */
 
@@ -98,7 +135,7 @@ button:hover {
 .login-form {
 	width: 400px;
 	display: block;
-	margin: 50px auto;
+	margin: 30px auto;
 }
 
 
